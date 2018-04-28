@@ -14,6 +14,9 @@ class Tec2Vtk:
     TITLE must be provided in tec file.
     There are only two categories: unstructured and table. If input tec file is FE-type then produce unstructured grid, 
                                                            if input tec file is ordered-ijk then produce table.
+    Points or structured grid from table could be create with Table To Points and Table To Structured Grid if desired.
+    Problem is we need to refer to I, J, K in original tec to obtain extents for Table To Structured.
+    TODO: Add longcuts: N -> NODES, E -> ELEMENTS, others whenever you encounter.
     '''
 
     def __init__(self):
